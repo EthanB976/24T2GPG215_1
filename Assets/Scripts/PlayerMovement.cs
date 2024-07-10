@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If mouse button pressed jump
         if (Input.GetMouseButtonDown(0))
         {
             rb2d.velocity = new Vector2(0, 5);
