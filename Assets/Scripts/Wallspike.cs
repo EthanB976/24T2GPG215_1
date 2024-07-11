@@ -18,7 +18,7 @@ public class Wallspike : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p = GameObject.Find("PlayerControl").GetComponent<PlayerMovement>();
+       
         if (dir)
         {
             for (int i = 0; i < amount; i++)
