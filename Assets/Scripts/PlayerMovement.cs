@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float score;
     private float timer;
     private bool canDie = true;
+    [SerializeField] private float iFrameTimer = 80f;
 
 
     [SerializeField] private TextMeshProUGUI scoretxt;
@@ -76,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "rightwall")
         {
-            timer = 50f;
+            timer = iFrameTimer;
             //Player turns left, Increase Score
             Rightwall = true;
             transform.localScale = new Vector3 (-0.8f, 0.8f, 0.8f);
@@ -87,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "leftwall")
         {
-            timer = 50f;
+            timer = iFrameTimer;
             //Player turns right, Increase Score
             Rightwall = false;
             transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
