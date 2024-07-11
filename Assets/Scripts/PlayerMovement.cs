@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -10,14 +11,24 @@ public class PlayerMovement : MonoBehaviour
 
     private bool Rightwall = false;
 
+    private bool resetScore = false;
+
     [SerializeField] private float score;
 
     [SerializeField] private TextMeshProUGUI scoretxt;
+
+    [SerializeField] private ButtonManager buttonManager;
+
+    [SerializeField] private GameObject player;
+
+    [SerializeField] private GameObject startPostion;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -38,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(Vector2.right * (3 * Time.deltaTime));
         }
-
+;
         
     }
 
@@ -47,23 +58,43 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "rightwall")
         {
+            //Player turns left, Increase Score
             Rightwall = true;
             transform.localScale = new Vector3 (-0.8f, 0.8f, 0.8f);
             score += 1;
-            scoretxt.text = "" + score;
+            scoretxt.text = score.ToString("F0");
         }
 
         if (collision.tag == "leftwall")
         {
+            //Player turns right, Increase Score
             Rightwall = false;
             transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             score += 1;
-            scoretxt.text = "" + score;
+            scoretxt.text = score.ToString("F0");
         }
 
         if (collision.tag == "spike")
         {
+            //Player died
+            RestartGame();
             gameObject.SetActive(false);
+            buttonManager.GameOver();
         }
+    }
+
+    public void RestartGame()
+    {
+        //Reset player postion and make it face left
+        Rightwall = false;
+        player.transform.position = startPostion.transform.position;
+        transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+    }
+
+    public void ResetScore()
+    {
+        //Resets Score UI
+        score = 0;
+        scoretxt.text = score.ToString("F0");
     }
 }
