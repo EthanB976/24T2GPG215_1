@@ -4104,6 +4104,7 @@ MonoBehaviour:
   highScore: 0
   highScoretxt: {fileID: 1554621715}
   score: 0
+  iFrameTimer: 80
   scoretxt: {fileID: 825578064}
   buttonManager: {fileID: 1083636236}
   player: {fileID: 1732568065}
@@ -4394,6 +4395,7 @@ MonoBehaviour:
   spikePrefab: {fileID: 6410614119269200971, guid: f444887bd35a25f4f9482d4fd871f046, type: 3}
   dir: 0
   amount: 12
+  p: {fileID: 1732568067}
   spikes: []
 --- !u!4 &1803657847
 Transform:
@@ -4608,6 +4610,7 @@ MonoBehaviour:
   spikePrefab: {fileID: 6410614119269200971, guid: f444887bd35a25f4f9482d4fd871f046, type: 3}
   dir: 1
   amount: 12
+  p: {fileID: 1732568067}
   spikes: []
 --- !u!4 &1881918190
 Transform:
