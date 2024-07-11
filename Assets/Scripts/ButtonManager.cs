@@ -19,7 +19,7 @@ public class ButtonManager : MonoBehaviour
         character.SetActive(false);
         scoreUI.SetActive(false);
         lWallspikes = GameObject.Find("Left Wallspikes").GetComponent<Wallspike>();
-        rWallspikes = GameObject.Find("Left Wallspikes").GetComponent<Wallspike>();
+        rWallspikes = GameObject.Find("Right Wallspikes").GetComponent<Wallspike>();
     }
     public void StartButtonPressed()
     {

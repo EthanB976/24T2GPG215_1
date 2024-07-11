@@ -13,17 +13,16 @@ public class PlayerMovement : MonoBehaviour
 
     private bool resetScore = false;
 
-<<<<<<< Updated upstream
+
     [SerializeField] private float highScore;
 
     [SerializeField] private TextMeshProUGUI highScoretxt;
 
-    [SerializeField] private float score;
-=======
+
     public float score;
     private float timer;
     private bool canDie = true;
->>>>>>> Stashed changes
+
 
     [SerializeField] private TextMeshProUGUI scoretxt;
 
