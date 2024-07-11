@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "rightwall")
         {
-            timer = 30f;
+            timer = 50f;
             //Player turns left, Increase Score
             Rightwall = true;
             transform.localScale = new Vector3 (-0.8f, 0.8f, 0.8f);
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "leftwall")
         {
-            timer = 30f;
+            timer = 50f;
             //Player turns right, Increase Score
             Rightwall = false;
             transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
