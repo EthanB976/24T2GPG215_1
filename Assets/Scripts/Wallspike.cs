@@ -10,7 +10,7 @@ public class Wallspike : MonoBehaviour
     public GameObject spikePrefab;
     [SerializeField] private bool dir = true;
     [SerializeField] private int amount = 12;
-    private PlayerMovement p;
+    [SerializeField] private PlayerMovement p;
     private float pscore;
     public List<GameObject> spikes;
 
