@@ -9,6 +9,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject scoreUI;
     [SerializeField] private GameObject gameOver;
     [SerializeField] private PlayerMovement playerMovement;
+    private Wallspike lWallspikes;
+    private Wallspike rWallspikes;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +18,16 @@ public class ButtonManager : MonoBehaviour
         //Set Game object inactive so game doesn't start till button pressed
         character.SetActive(false);
         scoreUI.SetActive(false);
+        lWallspikes = GameObject.Find("Left Wallspikes").GetComponent<Wallspike>();
+        rWallspikes = GameObject.Find("Left Wallspikes").GetComponent<Wallspike>();
     }
     public void StartButtonPressed()
     {
         //Start game after button press
         mainMenu.SetActive(false);
         StartCoroutine(StartGame());
+        lWallspikes.Shuffle();
+        rWallspikes.Shuffle();
     }
 
     IEnumerator StartGame()
@@ -52,5 +58,7 @@ public class ButtonManager : MonoBehaviour
         //Play Again button
         gameOver.SetActive(false);
         StartCoroutine(StartGame());
+        lWallspikes.Shuffle();
+        rWallspikes.Shuffle();
     }
 }

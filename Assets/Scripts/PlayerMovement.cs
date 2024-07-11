@@ -13,11 +13,17 @@ public class PlayerMovement : MonoBehaviour
 
     private bool resetScore = false;
 
+<<<<<<< Updated upstream
     [SerializeField] private float highScore;
 
     [SerializeField] private TextMeshProUGUI highScoretxt;
 
     [SerializeField] private float score;
+=======
+    public float score;
+    private float timer;
+    private bool canDie = true;
+>>>>>>> Stashed changes
 
     [SerializeField] private TextMeshProUGUI scoretxt;
 
@@ -53,7 +59,16 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(Vector2.right * (3 * Time.deltaTime));
         }
-;
+
+        timer = timer - 1;
+        if(timer < 0)
+        {
+            canDie = true;
+        }
+        else
+        {
+            canDie = false;
+        }
         
     }
 
@@ -67,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3 (-0.8f, 0.8f, 0.8f);
             score += 1;
             scoretxt.text = score.ToString("F0");
+            timer = 30f;
         }
 
         if (collision.tag == "leftwall")
@@ -76,9 +92,10 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             score += 1;
             scoretxt.text = score.ToString("F0");
+            timer = 30f;
         }
 
-        if (collision.tag == "spike")
+        if (collision.tag == "spike" && canDie)
         {
             //Player died, Calls Highscore before restart game to save high score
             HighScore();
