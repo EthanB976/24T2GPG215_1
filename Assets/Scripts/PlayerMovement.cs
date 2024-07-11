@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool resetScore = false;
 
+    [SerializeField] private float highScore;
+
+    [SerializeField] private TextMeshProUGUI highScoretxt;
+
     [SerializeField] private float score;
 
     [SerializeField] private TextMeshProUGUI scoretxt;
@@ -76,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "spike")
         {
-            //Player died
+            //Player died, Calls Highscore before restart game to save high score
+            HighScore();
             RestartGame();
             gameObject.SetActive(false);
             buttonManager.GameOver();
@@ -96,5 +101,14 @@ public class PlayerMovement : MonoBehaviour
         //Resets Score UI
         score = 0;
         scoretxt.text = score.ToString("F0");
+    }
+
+    public void HighScore()
+    {
+        if(score >= highScore)
+        {
+            highScore = score;
+            highScoretxt.text = "High Score: " + highScore.ToString("F0");
+        }
     }
 }
