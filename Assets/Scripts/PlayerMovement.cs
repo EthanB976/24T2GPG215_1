@@ -76,22 +76,24 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "rightwall")
         {
+            timer = 30f;
             //Player turns left, Increase Score
             Rightwall = true;
             transform.localScale = new Vector3 (-0.8f, 0.8f, 0.8f);
             score += 1;
             scoretxt.text = score.ToString("F0");
-            timer = 30f;
+            
         }
 
         if (collision.tag == "leftwall")
         {
+            timer = 30f;
             //Player turns right, Increase Score
             Rightwall = false;
             transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             score += 1;
             scoretxt.text = score.ToString("F0");
-            timer = 30f;
+            
         }
 
         if (collision.tag == "spike" && canDie)
