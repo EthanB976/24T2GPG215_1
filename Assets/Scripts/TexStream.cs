@@ -9,7 +9,7 @@ public class TexStream : MonoBehaviour
     [SerializeField] SpriteRenderer s;
     public string filename = "pSprite";
     public string filetype = ".png";
-    public string filepath = Application.streamingAssetsPath;
+    private string filepath = Application.streamingAssetsPath;
     private string fullFilePath;
     // Start is called before the first frame update
     void Start()
