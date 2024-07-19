@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 23927395}
   m_Layer: 0
   m_Name: Triangle (10)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 86077499}
   m_Layer: 0
   m_Name: Triangle (9)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -821,8 +821,8 @@ GameObject:
   - component: {fileID: 260615731}
   - component: {fileID: 260615732}
   m_Layer: 0
-  m_Name: Triangle (33)
-  m_TagString: spike
+  m_Name: killspike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +952,7 @@ GameObject:
   - component: {fileID: 265848702}
   m_Layer: 0
   m_Name: Triangle (6)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 374615055}
   m_Layer: 0
   m_Name: Triangle (32)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1869,7 +1869,7 @@ GameObject:
   - component: {fileID: 687703154}
   m_Layer: 0
   m_Name: Triangle (27)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1999,7 +1999,7 @@ GameObject:
   - component: {fileID: 761782482}
   m_Layer: 0
   m_Name: Triangle (30)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2197,7 +2197,7 @@ GameObject:
   - component: {fileID: 786337168}
   m_Layer: 0
   m_Name: Triangle (11)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2545,7 +2545,7 @@ GameObject:
   - component: {fileID: 898493959}
   m_Layer: 0
   m_Name: Triangle (15)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2809,7 +2809,7 @@ GameObject:
   - component: {fileID: 974026794}
   m_Layer: 0
   m_Name: Triangle (26)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1021804343}
   m_Layer: 0
   m_Name: Triangle (8)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3196,7 +3196,7 @@ GameObject:
   - component: {fileID: 1174919868}
   m_Layer: 0
   m_Name: Triangle (31)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3459,7 +3459,7 @@ GameObject:
   - component: {fileID: 1347899089}
   m_Layer: 0
   m_Name: Triangle (28)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3689,7 +3689,7 @@ GameObject:
   - component: {fileID: 1352309338}
   m_Layer: 0
   m_Name: Triangle (13)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4003,7 +4003,7 @@ GameObject:
   - component: {fileID: 1642716843}
   m_Layer: 0
   m_Name: Triangle (14)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4133,7 +4133,7 @@ GameObject:
   - component: {fileID: 1712275395}
   m_Layer: 0
   m_Name: Triangle (7)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4263,7 +4263,7 @@ GameObject:
   - component: {fileID: 1741957751}
   m_Layer: 0
   m_Name: Triangle (29)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4657,7 +4657,7 @@ GameObject:
   - component: {fileID: 1962520795}
   m_Layer: 0
   m_Name: Triangle (12)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4787,7 +4787,7 @@ GameObject:
   - component: {fileID: 1971568914}
   m_Layer: 0
   m_Name: Triangle (34)
-  m_TagString: spike
+  m_TagString: killbarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

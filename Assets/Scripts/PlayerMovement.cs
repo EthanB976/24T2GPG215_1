@@ -106,6 +106,15 @@ public class PlayerMovement : MonoBehaviour
             gameObject.SetActive(false);
             buttonManager.GameOver();
         }
+
+        if (collision.tag == "killbarrier")
+        {
+            //Player died, Calls Highscore before restart game to save high score
+            HighScore();
+            RestartGame();
+            gameObject.SetActive(false);
+            buttonManager.GameOver();
+        }
     }
 
     public void RestartGame()
