@@ -5369,6 +5369,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 825578064}
     - target: {fileID: 5031310729899227853, guid: c678054aa05217c4185c4623e7be1511, type: 3}
+      propertyPath: iFrameTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031310729899227853, guid: c678054aa05217c4185c4623e7be1511, type: 3}
       propertyPath: highScoretxt
       value: 
       objectReference: {fileID: 1554621715}

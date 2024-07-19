@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool Rightwall = false;
 
-    private bool resetScore = false;
+    
 
 
     [SerializeField] private float highScore;
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
             transform.Translate(Vector2.right * (3 * Time.deltaTime));
         }
 
-        timer = timer - 1;
+        timer = timer - 1 * Time.deltaTime;
         if(timer < 0)
         {
             canDie = true;
