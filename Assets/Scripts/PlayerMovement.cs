@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool Rightwall = false;
 
-    
+    public Leaderboard leaderboard;
 
 
     [SerializeField] private float highScore;
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (collision.tag == "leftwall")
+        else if (collision.tag == "leftwall")
         {
             timer = iFrameTimer;
             //Player turns right, Increase Score
@@ -98,24 +98,29 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (collision.tag == "spike" && canDie)
+        else if (collision.tag == "spike" && canDie)
         {
             //Player died, Calls Highscore before restart game to save high score
             HighScore();
             RestartGame();
+            StartCoroutine(leaderboard.SubmitScoreRoutine((int)score));
             gameObject.SetActive(false);
             buttonManager.GameOver();
         }
 
-        if (collision.tag == "killbarrier")
+        else if (collision.tag == "killbarrier")
         {
+            
             //Player died, Calls Highscore before restart game to save high score
             HighScore();
             RestartGame();
+            StartCoroutine(leaderboard.SubmitScoreRoutine((int)score));
             gameObject.SetActive(false);
             buttonManager.GameOver();
         }
     }
+
+    
 
     public void RestartGame()
     {
