@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject leaderBoard;
     [SerializeField] private GameObject character;
     [SerializeField] private GameObject scoreUI;
     [SerializeField] private GameObject gameOver;
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private SpriteRenderer cloud;
+    public Leaderboard leaderboard;
     private Wallspike lWallspikes;
     private Wallspike rWallspikes;
 
@@ -60,5 +64,18 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(StartGame());
         lWallspikes.Shuffle();
         rWallspikes.Shuffle();
+    }
+
+    public void OpenLeaderboard()
+    {
+        mainMenu.SetActive(false);
+        StartCoroutine(leaderboard.FetchTopHighscoresRoutine());
+        leaderBoard.SetActive(true);
+    }
+
+    public void CloseLeaderBoard()
+    {
+        mainMenu.SetActive(true);
+        leaderBoard.SetActive(false);
     }
 }

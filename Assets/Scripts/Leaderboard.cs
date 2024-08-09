@@ -39,6 +39,7 @@ public class Leaderboard : MonoBehaviour
 
     public IEnumerator FetchTopHighscoresRoutine()
     {
+        Debug.Log("Fetching Highscores");
         bool done = false;
         LootLockerSDKManager.GetScoreList(leaderboardKey, 10, 0, (response) =>
         {
@@ -67,6 +68,7 @@ public class Leaderboard : MonoBehaviour
                 done = true;
                 playerNames.text = tempPlayerNames;
                 playerScores.text = tempPlayerScores;
+                Debug.Log("Gotten Scores");
             }
             else
             {
