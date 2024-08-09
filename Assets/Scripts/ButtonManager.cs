@@ -60,6 +60,7 @@ public class ButtonManager : MonoBehaviour
         //Returns to Main Menu Button
         gameOver.SetActive(false);
         mainMenu.SetActive(true);
+        scoreUI.SetActive(false);
         audioSource.PlayOneShot(clip);
     }
 
