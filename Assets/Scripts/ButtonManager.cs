@@ -17,6 +17,8 @@ public class ButtonManager : MonoBehaviour
     private Wallspike rWallspikes;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
+    [SerializeField] private AudioSource deathaudio;
+    [SerializeField] private AudioClip deathclip;
 
 
     // Start is called before the first frame update
@@ -53,6 +55,7 @@ public class ButtonManager : MonoBehaviour
         //Game Over UI Panel
         StartCoroutine(leaderboard.SubmitScoreRoutine((int)playerMovement.score));
         gameOver.SetActive(true);
+        deathaudio.PlayOneShot(deathclip);
     }
 
     public void ReturnToMainMenu()
