@@ -68,6 +68,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OpenLeaderboard()
     {
+        //Opens Leaderboard & Gets Leaderboards Scores
         mainMenu.SetActive(false);
         StartCoroutine(leaderboard.FetchTopHighscoresRoutine());
         leaderBoard.SetActive(true);
@@ -75,6 +76,7 @@ public class ButtonManager : MonoBehaviour
 
     public void CloseLeaderBoard()
     {
+        //Closes Leaderboard & Returns Main Menu
         mainMenu.SetActive(true);
         leaderBoard.SetActive(false);
     }
