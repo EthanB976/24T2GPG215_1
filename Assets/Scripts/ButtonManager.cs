@@ -15,6 +15,8 @@ public class ButtonManager : MonoBehaviour
     public Leaderboard leaderboard;
     private Wallspike lWallspikes;
     private Wallspike rWallspikes;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(StartGame());
         lWallspikes.Shuffle();
         rWallspikes.Shuffle();
+        audioSource.PlayOneShot(clip);
     }
 
     IEnumerator StartGame()
@@ -55,6 +58,7 @@ public class ButtonManager : MonoBehaviour
         //Returns to Main Menu Button
         gameOver.SetActive(false);
         mainMenu.SetActive(true);
+        audioSource.PlayOneShot(clip);
     }
 
     public void PlayAgain()
@@ -64,6 +68,7 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(StartGame());
         lWallspikes.Shuffle();
         rWallspikes.Shuffle();
+        audioSource.PlayOneShot(clip);
     }
 
     public void OpenLeaderboard()
@@ -72,6 +77,7 @@ public class ButtonManager : MonoBehaviour
         mainMenu.SetActive(false);
         StartCoroutine(leaderboard.FetchTopHighscoresRoutine());
         leaderBoard.SetActive(true);
+        audioSource.PlayOneShot(clip);
     }
 
     public void CloseLeaderBoard()
@@ -79,5 +85,6 @@ public class ButtonManager : MonoBehaviour
         //Closes Leaderboard & Returns Main Menu
         mainMenu.SetActive(true);
         leaderBoard.SetActive(false);
+        audioSource.PlayOneShot(clip);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
-
+using Unity.VisualScripting.FullSerializer;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject startPostion;
 
     [SerializeField] private SpriteRenderer cloud;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         // If mouse button pressed jump
         if (Input.GetMouseButtonDown(0))
         {
+            audioSource.PlayOneShot(clip);
             rb2d.velocity = new Vector2(0, 5);
         }
 
