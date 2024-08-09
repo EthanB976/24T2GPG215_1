@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer cloud;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
+    [SerializeField] private AudioSource audioSource2;
+    [SerializeField] private AudioClip sideclip;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -88,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3 (-0.8f, 0.8f, 0.8f);
             score += 1;
             scoretxt.text = score.ToString("F0");
+            audioSource2.PlayOneShot(sideclip);
             
         }
 
@@ -99,7 +103,8 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             score += 1;
             scoretxt.text = score.ToString("F0");
-            
+            audioSource2.PlayOneShot(sideclip);
+
         }
 
         else if (collision.tag == "spike" && canDie)
@@ -109,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             RestartGame();
             gameObject.SetActive(false);
             buttonManager.GameOver();
+            
         }
 
         else if (collision.tag == "killbarrier")
@@ -119,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
             RestartGame();        
             gameObject.SetActive(false);
             buttonManager.GameOver();
+           
         }
     }
 
