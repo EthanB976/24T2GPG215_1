@@ -107,7 +107,6 @@ public class PlayerMovement : MonoBehaviour
             //Player died, Calls Highscore before restart game to save high score
             HighScore();
             RestartGame();
-            StartCoroutine(leaderboard.SubmitScoreRoutine((int)score));
             gameObject.SetActive(false);
             buttonManager.GameOver();
         }
@@ -117,14 +116,13 @@ public class PlayerMovement : MonoBehaviour
             
             //Player died, Calls Highscore before restart game to save high score
             HighScore();
-            RestartGame();
-            StartCoroutine(leaderboard.SubmitScoreRoutine((int)score));
+            RestartGame();        
             gameObject.SetActive(false);
             buttonManager.GameOver();
         }
     }
 
-    
+
 
     public void RestartGame()
     {

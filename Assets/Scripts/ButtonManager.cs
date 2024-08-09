@@ -18,6 +18,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip clip;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,7 @@ public class ButtonManager : MonoBehaviour
     public void GameOver()
     {
         //Game Over UI Panel
+        StartCoroutine(leaderboard.SubmitScoreRoutine((int)playerMovement.score));
         gameOver.SetActive(true);
     }
 
